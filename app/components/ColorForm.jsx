@@ -64,13 +64,13 @@ const ColorForm = () => {
                 </div>
                 <div className='w-[90%] ml-1'>
                     <div className="font-heading text-left pl-5 pb-2">Add in the hex values of the colors: </div>
-                    <form onSubmit={handleSubmit} className='flex flex-col items-start justify-start gap-2 mb-10 ' >
+                    <form onSubmit={handleSubmit} className='flex flex-col items-start justify-start gap-3 mb-10 ' >
                         <div className='flex xl:text-lg font-heading flex-col justify-start items-start gap-1 border-2 px-2 ml-2 text-sm rounded-xl py-1 w-full hover:-translate-x-2 hover:-skew-y-1 hover:shadow-md'>
-                            <label htmlFor="primarycol" className='p-2'>
+                            <label htmlFor="primarycol" className='pl-2'>
                                 Primary color
                             </label>
 
-                            <input onChange={(e) => setpalette({ ...palette, colone: e.target.value })} placeholder='Example: #5552ff' className='p-2' id="primarycol" >
+                            <input onChange={(e) => setpalette({ ...palette, colone: e.target.value })} placeholder='Example: #5552ff' className='p-2 -mt-1' id="primarycol" >
 
                             </input>
 
@@ -78,11 +78,11 @@ const ColorForm = () => {
 
                         {/* color 2 */}
                         <div className='flex xl:text-lg font-heading flex-col justify-start items-start gap-1 border-2 px-2 ml-2 text-sm rounded-xl py-1 w-full hover:-translate-x-2 hover:-skew-y-1 hover:shadow-md'>
-                            <label htmlFor="seccol" className='p-2'>
+                            <label htmlFor="seccol" className='pl-2'>
                                 Secondary color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, coltwo: e.target.value })} id="seccol" placeholder='Example: #ffffff' className='p-2'>
+                                <input onChange={(e) => setpalette({ ...palette, coltwo: e.target.value })} id="seccol" placeholder='Example: #ffffff' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
@@ -90,11 +90,11 @@ const ColorForm = () => {
 
                         {/* Color 3 */}
                         <div className='flex xl:text-lg font-heading flex-col justify-start items-start gap-1 border-2 px-2 ml-2 text-sm rounded-xl py-1 w-full hover:-translate-x-2 hover:-skew-y-1 hover:shadow-md'>
-                            <label htmlFor="tertcol" className='p-2'>
+                            <label htmlFor="tertcol" className='pl-2'>
                                 Tertiary color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} id="tertcol" placeholder='Example:e6e5db ' className='p-2'>
+                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} id="tertcol" placeholder='Example:e6e5db ' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
@@ -102,11 +102,11 @@ const ColorForm = () => {
 
                         {/* color 4 */}
                         <div className='flex xl:text-lg font-heading flex-col justify-start items-start gap-1 border-2 px-2 ml-2 text-sm rounded-xl py-1 w-full hover:-translate-x-2 hover:-skew-y-1 hover:shadow-md'>
-                            <label htmlFor="quartcol" className='p-2'>
+                            <label htmlFor="quartcol" className='pl-2'>
                                 Quarternery color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, colfour: e.target.value })} id="quartcol" placeholder='Exapmle: #ffc700' className='p-2'>
+                                <input onChange={(e) => setpalette({ ...palette, colfour: e.target.value })} id="quartcol" placeholder='Exapmle: #ffc700' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
