@@ -94,7 +94,7 @@ const ColorForm = () => {
                                 Tertiary color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} id="tertcol" placeholder='Example:e6e5db ' className='p-2 -mt-1'>
+                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} id="tertcol" placeholder='Example: #e6e5db ' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
