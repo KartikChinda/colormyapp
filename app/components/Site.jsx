@@ -4,8 +4,8 @@ import React from 'react'
 
 const Site = ({ closeSite, cone, ctwo, cthree, cfour }) => {
     return (
-        <div className='fixed top-16 md:top-0 inset-0 bg-opacity-30 backdrop-blur-sm flex justify-center items-center font-sans'>
-            <div className='flex flex-col gap-3 w-[100%] m-5 bg-[#ffffff] p-2'>
+        <div className='fixed top-2 md:top-0 inset-0 bg-opacity-30 backdrop-blur-sm flex justify-center items-center font-sans'>
+            <div className='flex relative top-14 md:top-0 flex-col gap-3 w-[100%] m-5 bg-[#ffffff] p-2'>
                 <button className=' text-right p-2 text-5xl font-sans border-2 border-black' onClick={closeSite}>X</button>
                 <div className='border-2 border-black' style={{ backgroundColor: cone }}>
                     <nav className=' h-[34px] md:h-[80px]' style={{ backgroundColor: ctwo }}>
@@ -25,9 +25,9 @@ const Site = ({ closeSite, cone, ctwo, cthree, cfour }) => {
                             <form className='flex flex-col justify-start gap-1 md:gap-2 m-2 rounded-lg pt-2 pb-2 px-4 border-2' style={{ backgroundColor: cfour, border: `2px solid ${ctwo}` }}>
                                 <p className='text-3xl mx-auto pb-3 font-playfair' style={{ color: cthree }}>This is a form</p>
 
-                                <input type="text" placeholder='Placeholder input' className='p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
-                                <input type="text" placeholder='Placeholder input' className='p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
-                                <input type="text" placeholder='Placeholder input' className='p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
+                                <input type="text" placeholder='Placeholder input' className='p-1 md:p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
+                                <input type="text" placeholder='Placeholder input' className='p-1 md:p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
+                                <input type="text" placeholder='Placeholder input' className='p-1 md:p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
 
 
                                 <button className='rounded-xl p-2 m-1 border-2  w-4/5 mx-auto mt-3' style={{ backgroundColor: cthree, color: cfour, border: `2px solid ${ctwo}` }} >Submit</button>
