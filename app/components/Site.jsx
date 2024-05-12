@@ -30,8 +30,8 @@ const Site = ({ closeSite, cone, ctwo, cthree, cfour }) => {
                                 <input type="text" placeholder='Placeholder input' className='p-1 md:p-4 m-1 rounded-xl outline-1 ' style={{ border: `2px solid ${ctwo}` }} />
 
 
-                                <button className='rounded-xl p-2 m-1 border-2  w-4/5 mx-auto mt-3' style={{ backgroundColor: cthree, color: cfour, border: `2px solid ${ctwo}` }} >Submit</button>
-                                <button className='rounded-xl p-2 m-1 border-2 b w-4/5 mx-auto ' style={{ backgroundColor: cthree, color: cfour, border: `2px solid ${ctwo}` }} >Cancel</button>
+                                <div className='rounded-xl p-2 m-1 border-2  w-4/5 mx-auto mt-3 hover:cursor-pointer' style={{ backgroundColor: cthree, color: cfour, border: `2px solid ${ctwo}` }} >Submit</div>
+                                <div className='rounded-xl p-2 m-1 border-2 b w-4/5 mx-auto hover:cursor-pointer ' style={{ backgroundColor: cthree, color: cfour, border: `2px solid ${ctwo}` }} >Cancel</div>
 
 
 
