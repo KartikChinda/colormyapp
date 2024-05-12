@@ -27,7 +27,7 @@ const HomePage = () => {
                 <div className='hover:skew-y-1 hover:translate-x-2 font-heading pb-10 mx-auto'>
                     <span className='text-2xl font-black border-2 rounded-2xl p-2 border-black hover:font-bold hover:shadow-xl shadow-lg '>Color Palettes</span>
                 </div>
-                <div className='p-2 flex flex-row flex-wrap gap-2 justify-center md:justify-around'>
+                <div className='p-2 flex flex-row flex-wrap gap-2 justify-center md:justify-start'>
                     {palettes.map((p) => {
                         return (<>
                             <Palette colone={p.colone} coltwo={p.coltwo} colthree={p.colthree} colfour={p.colfour} />

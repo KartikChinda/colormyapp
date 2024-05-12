@@ -8,7 +8,7 @@ export default function Home() {
         <div className="border-4 border-black lg:w-[62%] p-5 bg-[#fff] ">
           <HomePage />
         </div>
-        <div className="border-4 border-black lg:w-[32%] p-5 text-center bg-[#fff] ">
+        <div className="border-4 border-black lg:w-[32%] p-5 text-center bg-[#fff] md:h-[100vh] sm:h-[50vh] ">
           <ColorForm />
         </div>
       </div>
