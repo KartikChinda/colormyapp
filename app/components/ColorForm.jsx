@@ -14,7 +14,7 @@ const ColorForm = () => {
     })
 
     const handleClear = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         setpalette({
             colone: "",
             coltwo: "",
@@ -24,7 +24,7 @@ const ColorForm = () => {
     }
 
     const handleSubmit = async (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         const data = palette;
         setpalette({
             colone: "",
@@ -70,7 +70,7 @@ const ColorForm = () => {
                                 Primary color
                             </label>
 
-                            <input onChange={(e) => setpalette({ ...palette, colone: e.target.value })} placeholder='Example: #5552ff' className='p-2 -mt-1' id="primarycol" >
+                            <input onChange={(e) => setpalette({ ...palette, colone: e.target.value })} value={palette.colone} placeholder='Example: #5552ff' className='p-2 -mt-1' id="primarycol" >
 
                             </input>
 
@@ -82,7 +82,7 @@ const ColorForm = () => {
                                 Secondary color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, coltwo: e.target.value })} id="seccol" placeholder='Example: #ffffff' className='p-2 -mt-1'>
+                                <input onChange={(e) => setpalette({ ...palette, coltwo: e.target.value })} value={palette.coltwo} id="seccol" placeholder='Example: #ffffff' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
@@ -94,7 +94,7 @@ const ColorForm = () => {
                                 Tertiary color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} id="tertcol" placeholder='Example: #e6e5db ' className='p-2 -mt-1'>
+                                <input onChange={(e) => setpalette({ ...palette, colthree: e.target.value })} value={palette.colthree} id="tertcol" placeholder='Example: #e6e5db ' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
@@ -106,7 +106,7 @@ const ColorForm = () => {
                                 Quarternery color
                             </label>
                             <div>
-                                <input onChange={(e) => setpalette({ ...palette, colfour: e.target.value })} id="quartcol" placeholder='Exapmle: #ffc700' className='p-2 -mt-1'>
+                                <input onChange={(e) => setpalette({ ...palette, colfour: e.target.value })} value={palette.colfour} id="quartcol" placeholder='Exapmle: #ffc700' className='p-2 -mt-1'>
 
                                 </input>
                             </div>
