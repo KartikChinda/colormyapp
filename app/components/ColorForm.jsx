@@ -14,7 +14,7 @@ const ColorForm = () => {
     })
 
     const handleClear = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         setpalette({
             colone: "",
             coltwo: "",
@@ -34,7 +34,7 @@ const ColorForm = () => {
         })
         try {
             console.log("Sending data as: ", data.colone);
-            const response = await fetch("/api/palette/new", {
+            await fetch("/api/palette/new", {
                 method: "POST",
                 body: JSON.stringify({
                     cone: data.colone,
