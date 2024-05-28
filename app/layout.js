@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className=" bg-[#5552ff]">
-        <div className="bg-white md:mt-16 mt-10 w-[85%] mx-auto border-4 border-black ">
+        <div className="bg-white mb-10 md:mt-16 mt-10 w-[85%] mx-auto border-4 border-black ">
           <Navbar />
           {children}
         </div>
