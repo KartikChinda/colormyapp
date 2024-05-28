@@ -37,7 +37,7 @@ const ColorForm = ({ setFormSubmitted }) => {
         })
         try {
 
-            const response = await fetch("/api/palette/new", {
+            const response = await fetch("/api/new", {
                 method: "POST",
                 body: JSON.stringify({
                     cone: data.colone,

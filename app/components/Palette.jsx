@@ -22,7 +22,8 @@ const Palette = ({ colone, coltwo, colthree, colfour, likes, id, setbuttonClicke
     const handleUpdate = async () => {
         try {
             console.log("Hitting the backend: ", id);
-            const response = await fetch(`/api/palette/${id}`, { method: "PUT" })
+            console.log(typeof (id))
+            const response = await fetch(`/api/${id}`, { method: "PUT" })
 
             if (response.ok) {
                 setbuttonClicked(prev => !prev)

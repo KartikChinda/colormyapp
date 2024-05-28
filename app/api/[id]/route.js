@@ -1,11 +1,14 @@
 import colorPalette from "@/models/colors";
 import { connectToDB } from "@/utils/database";
 
-export const PUT = async ({ params }) => {
+export const PUT = async (req, { params }) => {
 
-    const id = params.slug;
+    console.log(params);
+    const id = params.id;
+    console.log("Params id is: ", params.id)
     await connectToDB();
     try {
+
         const pallete = await colorPalette.findById(id);
         console.log("The palette we got is: ", pallete);
         const updatedPalette = await colorPalette.findByIdAndUpdate(id, { likes: pallete.likes + 1 }, { new: true });

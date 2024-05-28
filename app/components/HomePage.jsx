@@ -10,7 +10,7 @@ const HomePage = ({ formSubmitted }) => {
 
     useEffect(() => {
         const fetchPalettes = async () => {
-            const response = await fetch("/api/palette");
+            const response = await fetch("/api");
             const data = await response.json();
             data.sort((a, b) => b.likes - a.likes)
             setPalettes(data);
