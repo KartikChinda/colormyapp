@@ -1,9 +1,12 @@
 'use client';
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
-const ColorForm = () => {
+const ColorForm = ({ setFormSubmitted }) => {
+
+    const router = useRouter();
 
 
     const [palette, setpalette] = useState({
@@ -33,8 +36,8 @@ const ColorForm = () => {
             colfour: "",
         })
         try {
-            console.log("Sending data as: ", data.colone);
-            await fetch("/api/palette/new", {
+
+            const response = await fetch("/api/palette/new", {
                 method: "POST",
                 body: JSON.stringify({
                     cone: data.colone,
@@ -44,6 +47,9 @@ const ColorForm = () => {
                 })
             });
 
+            if (response.ok) {
+                setFormSubmitted(prev => !prev)
+            }
 
 
 

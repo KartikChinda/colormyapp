@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import Palette from "./Palette";
 
-const HomePage = () => {
+const HomePage = ({ formSubmitted }) => {
     const [palettes, setPalettes] = useState([]);
     const [buttonClicked, setbuttonClicked] = useState(false)
+
 
     useEffect(() => {
         const fetchPalettes = async () => {
@@ -17,8 +18,7 @@ const HomePage = () => {
 
         fetchPalettes();
 
-    }, [buttonClicked])
-
+    }, [buttonClicked, formSubmitted])
 
 
     return (
@@ -30,9 +30,9 @@ const HomePage = () => {
                 </div>
                 <div className='p-2 flex flex-row flex-wrap gap-2 justify-center md:justify-start'>
                     {palettes.map((p) => {
-                        return (<>
+                        return (<div key={p._id}>
                             <Palette colone={p.colone} coltwo={p.coltwo} colthree={p.colthree} colfour={p.colfour} likes={p.likes} id={p._id} setbuttonClicked={setbuttonClicked} />
-                        </>)
+                        </div>)
                     })}
 
                 </div>

@@ -18,7 +18,7 @@ const Site = ({ closeSite, cone, ctwo, cthree, cfour }) => {
                         <div className='md:w-3/5 lg:w-4/6 md:pl-5 '>
                             <div className='flex flex-col justify-start items-start px-5'>
                                 <p className='text-3xl mx-auto md:mx-0 md:text-5xl mb-4 ' style={{ color: cthree }}>Heading goes here</p>
-                                <p className='text-left' style={{ color: cthree }}>Will this really be a mockup page without some lorem ipsum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, ipsum. are you still reading this? You were supposed to check the design layouts, not spend time f*cking around.  </p>
+                                <p className='text-left' style={{ color: cthree }}>Will this really be a mockup page without some lorem ipsum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, ipsum. Are you still reading this? You were supposed to check the design layouts, not spend time messing around. Get back to work.  </p>
                             </div>
                         </div>
                         <div className='md:w-2/5 lg:w-2/6 md:pr-5'>
