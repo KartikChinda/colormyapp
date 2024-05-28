@@ -2,7 +2,8 @@ import colorPalette from "@/models/colors";
 import { connectToDB } from "@/utils/database";
 
 export const PUT = async ({ params }) => {
-    const id = params.id;
+
+    const id = params.slug;
     await connectToDB();
     try {
         const pallete = await colorPalette.findById(id);
