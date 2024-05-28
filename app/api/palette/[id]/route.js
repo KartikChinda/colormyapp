@@ -1,7 +1,7 @@
 import colorPalette from "@/models/colors";
 import { connectToDB } from "@/utils/database";
 
-export const PUT = async (req: any, { params }) => {
+export const PUT = async ({ params }) => {
     const id = params.id;
     await connectToDB();
     try {
