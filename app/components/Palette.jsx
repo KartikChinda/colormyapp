@@ -1,9 +1,14 @@
+"use client";
 import React, { useState } from 'react';
 import Site from './Site';
+import { FaHeart } from "react-icons/fa";
 
-const Palette = ({ colone, coltwo, colthree, colfour }) => {
 
-    const [showModal, setshowModal] = useState(false)
+const Palette = ({ colone, coltwo, colthree, colfour, likes, id, setbuttonClicked }) => {
+
+    const [showModal, setshowModal] = useState(false);
+
+
 
 
     const handleCopy = (e) => {
@@ -13,6 +18,24 @@ const Palette = ({ colone, coltwo, colthree, colfour }) => {
 
         navigator.clipboard.writeText(e.target.value)
     }
+
+    const handleUpdate = async () => {
+        try {
+
+            const response = await fetch(`/api/palette/${id}`, { method: "PUT" })
+
+            if (response.ok) {
+                setbuttonClicked(prev => !prev)
+            }
+
+
+        } catch (error) {
+            console.log("This is a frontend error here in the updating");
+            console.log(error);
+        }
+    }
+
+
 
     return (
         <>
@@ -34,9 +57,11 @@ const Palette = ({ colone, coltwo, colthree, colfour }) => {
                     </button>
                 </div>
 
-                <div className='rounded-b-xl flex justify-center items-center p-2 border-t-2 border-black font-heading font-bold text-lg'>
+                <div className='rounded-b-xl flex justify-between items-center p-2 border-t-2 border-black font-heading font-bold text-lg '>
                     <button onClick={() => setshowModal(true)} className='text-sm xl:text-base font-semibold border-2 rounded-2xl p-2 border-black hover:font-bold hover:shadow-xl shadow-lg font-heading px-4 hover:text-[18px] bg-[#ffc700]' >Preview </button>
                     {showModal && <Site closeSite={() => setshowModal(false)} cone={colone} ctwo={coltwo} cthree={colthree} cfour={colfour} />}
+                    <button onClick={handleUpdate} className='text-black flex justify-center items-center gap-1'>{likes}<FaHeart /></button>
+
                 </div>
 
             </div>

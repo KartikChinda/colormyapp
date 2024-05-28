@@ -5,18 +5,19 @@ import Palette from "./Palette";
 
 const HomePage = () => {
     const [palettes, setPalettes] = useState([]);
+    const [buttonClicked, setbuttonClicked] = useState(false)
 
     useEffect(() => {
         const fetchPalettes = async () => {
             const response = await fetch("/api/palette");
             const data = await response.json();
-
+            data.sort((a, b) => b.likes - a.likes)
             setPalettes(data);
         }
 
         fetchPalettes();
 
-    }, [])
+    }, [buttonClicked])
 
 
 
@@ -30,7 +31,7 @@ const HomePage = () => {
                 <div className='p-2 flex flex-row flex-wrap gap-2 justify-center md:justify-start'>
                     {palettes.map((p) => {
                         return (<>
-                            <Palette colone={p.colone} coltwo={p.coltwo} colthree={p.colthree} colfour={p.colfour} />
+                            <Palette colone={p.colone} coltwo={p.coltwo} colthree={p.colthree} colfour={p.colfour} likes={p.likes} id={p._id} setbuttonClicked={setbuttonClicked} />
                         </>)
                     })}
 
