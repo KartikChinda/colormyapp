@@ -1,6 +1,8 @@
 import { connectToDB } from "@/utils/database";
 import colorPalette from "@/models/colors";
 
+export const revalidate = 0;
+
 export const GET = async () => {
     await connectToDB();
 
