@@ -1,6 +1,7 @@
 import { connectToDB } from "@/utils/database";
 import colorPalette from "@/models/colors";
 
+// https://stackoverflow.com/a/78543832/25304168
 export const revalidate = 0;
 
 export const GET = async () => {
